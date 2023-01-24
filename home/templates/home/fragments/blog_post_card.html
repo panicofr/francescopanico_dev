@@ -1,0 +1,16 @@
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+<div class="col-md-4 mb-5">
+    <div class="card blog-post-card">
+        {% image blog_post.feed_image width-600 format-webp class="card-img-top" width="" height="" %}
+        <div class="card-body">
+            <h5 class="card-title"><a class="theme-link" href="{{ blog_post.url }}">{{ blog_post.title }}</a></h5>
+            <p class="card-text">{{ blog_post.intro }}</p>
+            <p class="mb-0"><a class="text-link" href="{{ blog_post.url }}">Read more →</a></p>
+            
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Published 2 days ago</small>
+        </div>
+    </div><!--//card-->
+</div><!--//col-->

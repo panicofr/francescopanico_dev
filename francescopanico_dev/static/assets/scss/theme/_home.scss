@@ -1,0 +1,27 @@
+.profile-teaser {
+    .name {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+}
+
+.section-title {
+    font-size: 2rem;
+    position: relative;
+    padding-left: 1.5rem;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 100%;
+        background: $theme-color-primary;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}

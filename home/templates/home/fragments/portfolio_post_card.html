@@ -1,0 +1,25 @@
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+<div class="col-md-6 mb-5">
+    <div class="card project-card">
+        <div class="row no-gutters">
+            <div class="col-12 col-xl-5 card-img-holder">
+                {% image portfolio_post.feed_image fill-400x400 format-webp class="card-img" width="" height="" %}
+            </div>
+            <div class="col-12 col-xl-7">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{{ portfolio_post.github_link }}" class="theme-link" target="_blank">{{ portfolio_post.title }}</a></h5>
+                    <p class="card-text">{{ portfolio_post.intro }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="link-mask">
+            <a class="link-mask-link" href="{{ portfolio_post.github_link }}" target="_blank"></a>
+            <div class="link-mask-text">
+                <a class="btn btn-secondary" href="{{ portfolio_post.github_link }}" target="_blank">
+                    <i class="fab fa-github-alt fa-fw me-2"></i>View Project
+                </a>
+            </div>
+        </div><!--//link-mask-->
+    </div><!--//card-->
+</div><!--//col-->
